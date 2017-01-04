@@ -34,7 +34,8 @@ RUN yum --disablerepo='*' --enablerepo='remi-php56,remi,epel,base' install -y \
     php-xml \
     php-xmlrpc && \
 
-    yum --disablerepo='*' --enablerepo='remi-php56,remi,epel,base,updates' install -y php-fpm
+    yum --disablerepo='*' --enablerepo='remi-php56,remi,epel,base,updates' install -y php-fpm && \
+    yum clean all
 
 RUN mkdir -p /var/run/php-fpm
 
