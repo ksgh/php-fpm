@@ -39,3 +39,4 @@ RUN yum --disablerepo='*' --enablerepo='remi-php56,remi,epel,base' install -y \
 RUN mkdir -p /var/run/php-fpm
 
 ENTRYPOINT /usr/sbin/php-fpm --nodaemonize -R
+
